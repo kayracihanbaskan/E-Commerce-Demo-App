@@ -1,0 +1,25 @@
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+.venv/
+venv/
+ENV/
+env/
+*.env
+
+# PyCharm
+.idea/
+
+# SQLite database files
+*.sqlite3
+*.db
+
+# Logs
+*.log
+
+# OS specific
+.DS_Store
+Thumbs.db

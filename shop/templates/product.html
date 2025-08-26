@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ product.name }}{% endblock %}
+
+{% block content %}
+<div class="container p-5">
+    <div class="row">
+        <div class="col-md-6">
+            <img src="{{ product.image.url }}" class="img-fluid"
+                 style="width: 500px; height: 500px; object-fit: contain;"
+                 alt="{{ product.name }}">
+        </div>
+        <div class="col-md-6">
+            <h1>{{ product.name }}</h1>
+            <p class="text-dark fs-4">
+                {% if product.discount_price %}
+                {{ product.discount_price }} ₺
+                <del class="text-secondary fs-6">{{ product.price }} ₺</del>
+                {% else %}
+                {{ product.price }} ₺
+                {% endif %}
+            </p>
+            <p>{{ product.description }}</p>
+            <a href="#" class="btn btn-success">Add to Cart</a>
+        </div>
+    </div>
+</div>
+{% endblock %}
